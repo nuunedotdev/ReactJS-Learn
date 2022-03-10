@@ -3,11 +3,23 @@ import { useState, useEffect } from 'react';
 
 function List() {
 
-    
+    const [items, setItems] = useState();
+    useEffect(() => {
 
-    fetch('https://jsonplaceholder.typicode.com/posts')
-    .then(response => response.json())
-    .then(data => console.log(data));
+        const fetchItems = async () => {
+            try {
+                const response = await fetch('https://jsonplaceholder.typicode.com/users');
+                const data = await response.json();
+                // return setItems(data);
+                console.log(data)
+            }catch (err) {
+                console.log(err)
+            }
+
+        }
+
+        fetchItems();
+    }, [])
 
     return (
         <>
