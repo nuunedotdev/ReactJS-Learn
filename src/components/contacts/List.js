@@ -1,5 +1,14 @@
 import { Container, Table } from 'react-bootstrap'
+import { useState, useEffect } from 'react';
+
 function List() {
+
+    
+
+    fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(response => response.json())
+    .then(data => console.log(data));
+
     return (
         <>
             <Container className="mt-3">
