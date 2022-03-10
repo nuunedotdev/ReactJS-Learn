@@ -13,8 +13,6 @@ function App() {
       <Switch>
         <Route path="/" exact>
           <List />
-          
-          <Alert variant="primary">This is Come Alert</Alert>
         </Route>
         <Route path="/add" exact>
             <Add name="Abdulkadir"/>
